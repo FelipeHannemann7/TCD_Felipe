@@ -1,0 +1,9 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "/Users/luizcarraro/Projetos/DS3/aula_express_orm.sqlite",
+      "dialect": "SQLite",
+      "name": "DS3 Aula"
+    }
+  ]
+}

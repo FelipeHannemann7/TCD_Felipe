@@ -1,0 +1,22 @@
+
+<div class="text-center" >
+  <form class="form-signin" style="background-color:rgb(255, 255, 118)" method="POST" action="/auth/login">
+    <h1 class="h3 mb-3 font-weight-normal">Seja bem-vindo ao Login</h1>
+    <label for="username" class="sr-only">Login</label>
+
+    <input type="text" name="username" class="form-control" placeholder="Email address" required="" autofocus="">
+
+    <label for="password" class="sr-only">Senha</label>
+
+    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+
+    <p class="text-danger">{{errorMessage}}</p>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Lembrar de mim
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+  </form>
+
+</div>

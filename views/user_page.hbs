@@ -1,0 +1,16 @@
+<div class="container marketing">
+
+  <div class="row">
+    <div class="col-lg-12">
+      
+      {{> user_avatar}}
+      
+      <h2>{{user.name}}</h2>
+      <h4>{{tem-idade user.age}}</h4>
+      <p>Esta conta foi criada por {{user.name}}  em {{data-mes-ano user.createdAt}}. A ultima atualização foi em {{data-mes-ano user.updatedAt}}</p>
+      <p><a class="btn btn-secondary" href="/users" role="button">Voltar »</a></p>
+    </div>
+
+  </div>
+
+</div>

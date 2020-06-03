@@ -1,0 +1,32 @@
+
+
+<div class="table-responsive" style="background-color: white">
+  <h2 style="text-align: center;">Lista de Membros</h2>
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Data da Criação</th>
+        <th>Atualizado em</th>
+        <th>Pagina do Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{uppercase name}}</td>
+          <td>
+            {{tem-idade age}}
+          </td>
+          <td>{{data-mes-ano createdAt}}</td>
+          <td>{{data-mes-ano updatedAt}}</td>
+          <td><a href="/users/{{id}}">Ver Página</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+

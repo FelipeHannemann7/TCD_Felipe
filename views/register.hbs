@@ -1,0 +1,25 @@
+<div class="text-center">
+
+  <form class="form-signin" method="POST" action="/auth/register" style="margin-left: 10px;">
+    <h1 class="h3 mb-3 font-weight-normal"  style="text-align: left;">Crie seu usuario</h1>
+
+    <label for="name" class="sr-only">Seu Nome</label>
+    <input type="text" name="name" class="form-control" placeholder="Seu nome" required="" autofocus="" style="margin-left: 10px; width: 600px;">
+<p></p>
+    <label for="username" class="sr-only">Seu Login</label>
+    <input type="text" name="username" class="form-control" placeholder="Login" required="" autofocus=""style="margin-left: 10px; width: 600px;">
+<p></p>
+    <label for="password" class="sr-only">Senha</label>
+    <input type="password" name="password" class="form-control" placeholder="Senha" required=""style="margin-left: 10px; width: 600px;">
+<p></p>
+    <label for="confirmPassword" class="sr-only">Confirmação de senha</label>
+    <input type="password" name="confirmPassword" class="form-control" placeholder="Confirmação de Senha" required=""style="margin-left: 10px; width: 600px;">
+
+    {{#if errorMessage}}
+      <p class="text-danger">{{errorMessage}}</p>
+    {{/if}}
+<p></p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-left: 10px; width: 200px;">Cadastrar</button>
+  </form>
+
+</div>
