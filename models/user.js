@@ -16,11 +16,15 @@ function ModelUser(sequelize, DataType) {
     password: {
       type: DataType.STRING,
       allowNull: false
+    },
+    cargo: {
+      type: DataType.STRING,
+      allowNull: false
+    },
+    dtNascimento: {
+      type: DataType.STRING,
+      allowNull: false
     }
-    // cargo:{
-    //   type: DataType.STRING,
-    //   allowNull:false
-    // }
   }, {
     // opções
   });

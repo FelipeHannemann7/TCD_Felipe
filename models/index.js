@@ -7,7 +7,8 @@ const sequelize = new Sequelize({
 });
 
 // Carrega os models
-sequelize.User = sequelize.import('./user.js');
+sequelize.User   = sequelize.import('./user.js');
+sequelize.Louvor = sequelize.import('./louvor.js');
 
 // Sync com o schema do banco de dados
 sequelize.sync();
