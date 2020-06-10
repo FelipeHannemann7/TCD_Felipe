@@ -16,7 +16,9 @@ router.get('/', [isAuthenticated], async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const oracaos = await Oracao.create(req.body);
-    res.send({ oracaos });
+    res.render('oracao', {
+      oracaos
+    });
   } catch (e) {
     res.status(500).send({ message: 'Erro ao salvar a oração. ' });
   }

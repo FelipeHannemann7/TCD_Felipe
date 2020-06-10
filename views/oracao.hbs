@@ -1,14 +1,19 @@
+<script>
+    function MensagemSalva() {
+        alert('Oração Salva Com Sucesso');
+    }
+</script>
 <h1 style="text-align: center;">Faça seu Pedido de Oração</h1>
 <form class="form-signin" method="POST" action="/oracao" style="margin-left: 10px;margin-top: 35px;">
-
+    <h7 style="margin-left: 10px;">Digite Aqui seu pedido de Oração</h7>
     <div class="form-group" style="margin-left: 10px; width: 600px;">
         <label for="PedOracao" class="sr-only">Escreva seu Pedido de Oração</label>
         <textarea name="PedOracao" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-
     {{#if errorMessage}} <p class="text-danger">{{errorMessage}}</p>
     {{/if}}
+
     <p></p>
-    <button class="btn btn-lg btn-primary btn-block" type="submit"
+    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="MensagemSalva()"
         style="margin-left: 10px; width: 200px;">Salvar</button>
 </form>
