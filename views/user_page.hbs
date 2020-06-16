@@ -19,16 +19,30 @@
         </div>
       </div>
       <div class="form-group row">
-        <label style="text-align: right;" for="colFormLabelLg" class="col-sm-6 col-form-label col-form-label-lg">Data Nascimento:</label>
+        <label style="text-align: right;" for="colFormLabelLg" class="col-sm-6 col-form-label col-form-label-lg">Data
+          Nascimento:</label>
         <div class="col-sm-5">
           <input readonly='true' type="text" value={{user.dtNascimento}} class="form-control form-control-lg"
             id="colFormLabelLg" placeholder="col-form-label-lg">
         </div>
       </div>
-
-
-
     </div>
-
+    <div class="table-responsive" style="background-color: white">
+      <h2 style="text-align: center;">Pedidos de Oração</h2>
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Orações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each oracaos}}
+          <tr>
+            <td>{{UserCad}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
 
   </div>

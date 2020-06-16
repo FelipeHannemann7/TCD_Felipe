@@ -9,6 +9,8 @@
     <div class="form-group" style="margin-left: 10px; width: 600px;">
         <label for="PedOracao" class="sr-only">Escreva seu Pedido de Oração</label>
         <textarea name="PedOracao" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="cargo" class="sr-only">Cargo</label>
+
     </div>
     {{#if errorMessage}} <p class="text-danger">{{errorMessage}}</p>
     {{/if}}
@@ -16,4 +18,10 @@
     <p></p>
     <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="MensagemSalva()"
         style="margin-left: 10px; width: 200px;">Salvar</button>
+    <div style="opacity: 0;" class="input-group" style="margin-left: 10px;">
+        <select type="text" name="UserCad" class="custom-select" id="inputGroupSelect04"
+            aria-label="Example select with button addon">
+            <option value={{session.user.name}}>{{session.user.name}}</option>
+        </select>
+    </div>
 </form>

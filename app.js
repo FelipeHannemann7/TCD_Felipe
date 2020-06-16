@@ -9,10 +9,10 @@ require('./models');
 
 const UserRoutes = require('./routes/user');
 const LouvoresRoutes = require('./routes/louvor');
-const PetRoutes = require('./routes/pet');
 const AuthRoutes = require('./routes/auth');
 const AulaHelperRoutes = require('./routes/aula-helpers');
 const OracaoRoutes = require('./routes/oracao');
+const VisitaRoutes = require('./routes/visita');
 
 hbs.registerHelper('uppercase', function(text) {
   return text.toUpperCase();
@@ -34,7 +34,7 @@ hbs.registerHelper('lt', function (a, b) {
 
 // É igual a
 hbs.registerHelper('equal', function (a, b) {
-  return a === b;
+  return a == b;
 });
 
 // Soma 1
@@ -83,11 +83,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
 app.use('/users', [ /*middlwares*/ ], UserRoutes);
-app.use('/pets', PetRoutes);
+
 app.use('/auth', AuthRoutes);
 app.use('/aula-helpers', AulaHelperRoutes);
 app.use('/louvores', LouvoresRoutes)
 app.use('/oracao', OracaoRoutes)
+app.use('/visita', VisitaRoutes)
 
 app.get('/', function (req, res) {
   res.render('index', {

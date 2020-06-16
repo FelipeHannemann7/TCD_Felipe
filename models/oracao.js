@@ -5,9 +5,11 @@ function ModelOracao(sequelize, DataType) {
     PedOracao: {
       type: DataType.STRING,
       allowNull: false
+    },
+    UserCad: {
+      type: DataType.STRING,
+      allowNull: false
     }
-  }, {
-    // opções
   });
   return Oracao;
 }

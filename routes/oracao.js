@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
       oracaos
     });
   } catch (e) {
+    console.log(e)
     res.status(500).send({ message: 'Erro ao salvar a oração. ' });
   }
 });
