@@ -17,10 +17,9 @@
         <tr>
           <th>#</th>
           <th>Nome</th>
-          <th>Idade</th>
           <th>Data da Criação</th>
           <th>Atualizado em</th>
-          <th>Pagina do Usuario</th>
+          <th>Mais informações do usuário</th>
         </tr>
       </thead>
       <tbody id="myTable">
@@ -28,9 +27,6 @@
         <tr>
           <td>{{id}}</td>
           <td>{{uppercase name}}</td>
-          <td>
-            {{tem-idade age}}
-          </td>
           <td>{{data-mes-ano createdAt}}</td>
           <td>{{data-mes-ano updatedAt}}</td>
           <td><a href="/users/{{id}}">Ver Página</a></td>

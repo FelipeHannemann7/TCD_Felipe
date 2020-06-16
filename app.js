@@ -13,6 +13,7 @@ const AuthRoutes = require('./routes/auth');
 const AulaHelperRoutes = require('./routes/aula-helpers');
 const OracaoRoutes = require('./routes/oracao');
 const VisitaRoutes = require('./routes/visita');
+const BibliaRoutes = require('./routes/biblia');
 
 hbs.registerHelper('uppercase', function(text) {
   return text.toUpperCase();
@@ -89,6 +90,7 @@ app.use('/aula-helpers', AulaHelperRoutes);
 app.use('/louvores', LouvoresRoutes)
 app.use('/oracao', OracaoRoutes)
 app.use('/visita', VisitaRoutes)
+app.use('/biblia', BibliaRoutes)
 
 app.get('/', function (req, res) {
   res.render('index', {
