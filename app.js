@@ -15,11 +15,11 @@ const OracaoRoutes = require('./routes/oracao');
 const VisitaRoutes = require('./routes/visita');
 const BibliaRoutes = require('./routes/biblia');
 
-hbs.registerHelper('uppercase', function(text) {
+hbs.registerHelper('uppercase', function (text) {
   return text.toUpperCase();
 });
 
-hbs.registerHelper('sum', function(a, b) {
+hbs.registerHelper('sum', function (a, b) {
   return a + b;
 });
 
@@ -40,19 +40,19 @@ hbs.registerHelper('equal', function (a, b) {
 
 // Soma 1
 hbs.registerHelper('add', function (a) {
-  return a+1;
+  return a + 1;
 });
 
-hbs.registerHelper('tem-idade', function(age) {
+hbs.registerHelper('tem-idade', function (age) {
   // return age? age + " anos" : "Idade não informada";
-  if(age) {
+  if (age) {
     return age + " anos";
   } else {
     return "Idade não informada"
   }
 });
 
-hbs.registerHelper('data-mes-ano', function(data) {
+hbs.registerHelper('data-mes-ano', function (data) {
   data = new Date(data);
   const dia = data.getDate();
   const mes = data.getMonth() + 1;
@@ -64,7 +64,7 @@ app.use(session({
   secret: 'este é um secret'
 }));
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.session = req.session;
   next();
 })
@@ -76,14 +76,14 @@ app.set('view options', {
   layout: 'layouts/default'
 });
 
-app.use(express.static( path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json());
 
-app.use('/users', [ /*middlwares*/ ], UserRoutes);
+app.use('/users', [ /*middlwares*/], UserRoutes);
 
 app.use('/auth', AuthRoutes);
 app.use('/aula-helpers', AulaHelperRoutes);
@@ -99,10 +99,10 @@ app.get('/', function (req, res) {
   });
 });
 
-if( process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV === 'test') {
   module.exports = app;
 } else {
-  
+
   app.listen(3000, function () {
     console.log('Applicativo de exemplo escutando na porta 3000!');
   });
